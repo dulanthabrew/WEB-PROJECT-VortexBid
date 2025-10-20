@@ -213,6 +213,8 @@ const stripePromise = loadStripe("pk_test_...");
 - `POST /api/auctions/create` - Create new auction
 - `GET /api/auctions/{id}` - Get auction details
 - `POST /api/auctions/my` - Get user's auctions
+- `PUT /api/auctions/edit` - Update auction details
+- `DELETE /api/auctions/delete` - Delete auction
 
 ### Bidding
 
