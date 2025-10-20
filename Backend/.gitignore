@@ -1,0 +1,6 @@
+api/obj
+api/bin
+.fake
+api/uploads/*.jpg
+api/uploads/*.jpeg
+api/uploads/*.png
