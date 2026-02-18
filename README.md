@@ -1,277 +1,318 @@
-```markdown
-# FixOnGo - On-Road Vehicle Breakdown Assistant
-
-**Mobile Application**  
-**Group 01 – MAD Project Proposal**  
-**NSBM Green University Town**
-
----
-
+# VortexBid - Online Auction Management System
 ## 🎯 Project Overview
-
-FixOnGo is a smart, cross-platform mobile application designed to provide **immediate roadside assistance** during on-road vehicle breakdowns. Whether it's a flat tire, dead battery, fuel issue, or any mechanical failure, the app connects drivers with AI guidance, nearby verified mechanics, tool/spare-part delivery, and professional call-center support — all in one tap.
-
-Built with **Flutter**, FixOnGo delivers a seamless experience on both Android and iOS with beautiful dark & light themes, real-time GPS tracking, and secure digital payments.
-
----
-
+VortexBid is a comprehensive online auction management system that provides a complete platform for conducting secure, real-time auctions. The system consists of a modern React frontend and a robust ASP.NET Core backend, offering a seamless experience for both auction creators and bidders.
 ## 🌟 Key Features
-
-### 🛠️ Core Assistance Features
-- **AI-Powered Breakdown Assistant** – 24/7 rule-based AI chatbot with step-by-step guidance for minor issues (battery, tire, fuel, overheating, etc.)
-- **GPS Location Tracking & Mapping** – Automatic location detection + map view showing nearby mechanics and service providers
-- **Mechanic & Tool Request System** – Request verified mechanics or get tools/spare parts delivered to your exact location with ETA and cost preview
-- **In-App Call Center Support** – One-tap connection to experienced mechanics when AI is not enough
-- **Real-Time In-App Chat** – Direct messaging with mechanics and service providers
-- **Live Tracking** – Track mechanic/tool delivery in real time on the map
-
-### 💳 Payment & Trust Features
-- **Secure Payment Gateway** – PayHere / Stripe integration with transparent pricing
-- **Digital Receipts & Transaction History**
-- **Service Provider Ratings & Reviews** – Verified database of mechanics, garages, towing & tool providers
-
-### 👤 User Experience Features
-- **Beautiful Dual Theme UI** (Dark & Light)
-- **User Registration & Secure Login**
-- **Profile Management** with vehicle details & service history
-- **Real-time Notifications & Updates**
-
----
-
+### 🏆 Core Auction Features
+- **Real-time Bidding**: Live auction participation with instant bid updates
+- **Multi-item Auctions**: Support for auctions with multiple items
+- **Secure Payment Processing**: Integrated Stripe payment system
+- **User Management**: Comprehensive user registration and profile management
+- **Notification System**: Real-time notifications for bids, payments, and updates
+- **Dashboard Analytics**: Detailed analytics and reporting for users
+### 💳 Payment & Security
+- **Stripe Integration**: Secure payment processing with credit card support
+- **Upfront Payment**: 10% upfront payment requirement for bidding
+- **Payment History**: Complete transaction history and receipts
+- **Secure Authentication**: JWT-based authentication system
+- **Data Protection**: Secure data handling and storage
+### 📊 Analytics & Reporting
+- **Dashboard Metrics**: KPI cards showing auction statistics
+- **Chart Visualizations**: Interactive charts for auction trends and categories
+- **Activity Tracking**: Real-time activity feeds and notifications
+- **Performance Analytics**: User performance and auction success metrics
 ## 🏗️ System Architecture
-
 ### Technology Stack
-
-#### Frontend
-- **Framework**: Flutter (cross-platform)
-- **UI/UX**: Material Design 3 + Custom Dark/Light Themes
-- **State Management**: Provider / Riverpod (recommended)
-- **Maps**: Google Maps Flutter
-- **Animations**: Built-in Flutter animations + Lottie
-
 #### Backend
-- **Backend**: Firebase (recommended) or Node.js + Express
-- **Database**: Firebase Firestore or MySQL
-- **Authentication**: Firebase Authentication
-- **Storage**: Firebase Storage (for vehicle photos, receipts)
-- **Cloud Functions**: For real-time notifications & background jobs
-- **AI Assistant**: Rule-based chatbot (future ML upgrade planned)
-
-#### Services
-- **Location & Mapping**: Google Maps API + Geocoding
-- **Payment**: PayHere / Stripe
-- **Push Notifications**: Firebase Cloud Messaging (FCM)
-
----
-
+- **Framework**: ASP.NET Core 8.0
+- **Database**: MySQL with Entity Framework Core
+- **ORM**: Entity Framework Core 8.0.8
+- **Payment**: Stripe.net integration
+- **API**: RESTful API with Swagger documentation
+- **Background Services**: Hosted services for auction management
+#### Frontend
+- **Framework**: React 18.3.1
+- **Build Tool**: Vite 7.1.9
+- **Styling**: Tailwind CSS 3.4.10
+- **Routing**: React Router DOM 6.26.1
+- **Animations**: Framer Motion 11.5.4
+- **Charts**: Chart.js 4.4.5
+- **Icons**: FontAwesome 6.6.0
+- **Payment**: Stripe React Components
+#### Database
+- **Database**: MySQL
+- **Schema**: Normalized relational database
+- **Relationships**: Well-defined entity relationships
+- **Indexing**: Optimized for performance
 ## 📁 Project Structure
-
-```bash
-FixOnGo/
-├── lib/
-│   ├── core/               # Constants, themes, routes, utils
-│   ├── features/
-│   │   ├── auth/           # Login, Register, Profile
-│   │   ├── home/           # Dashboard & Get Help Now
-│   │   ├── ai_assistant/   # AI Chatbot screen
-│   │   ├── map/            # Live location & tracking
-│   │   ├── request/        # Mechanic/Tool request flow
-│   │   ├── chat/           # In-app messaging
-│   │   ├── payment/        # Payment & receipt screens
-│   │   └── profile/        # User & vehicle management
-│   ├── models/             # Data models (User, Mechanic, Request, etc.)
-│   ├── services/           # Firebase, Maps, Payment services
-│   ├── widgets/            # Reusable components
-│   └── main.dart
-├── assets/
-│   ├── images/             # App icons, car illustrations
-│   └── icons/
-├── firebase.json
-├── pubspec.yaml
-├── README.md
-└── docs/
-    └── wireframes/         # All proposal wireframes
 ```
-
----
-
+Vortex-Bid-New/
+├── Backend/ # ASP.NET Core API
+│ ├── api/ # Main API project
+│ │ ├── Controllers/ # API Controllers
+│ │ ├── Data/ # Database context
+│ │ ├── Dtos/ # Data Transfer Objects
+│ │ ├── Models/ # Entity models
+│ │ ├── Migrations/ # Database migrations
+│ │ └── uploads/ # File uploads
+│ ├── docs/ # Backend documentation
+│ └── README.md # Backend documentation
+├── Frontend/ # React application
+│ ├── src/ # Source code
+│ │ ├── components/ # Reusable components
+│ │ ├── pages/ # Page components
+│ │ ├── styles/ # CSS files
+│ │ └── assets/ # Static assets
+│ ├── public/ # Public assets
+│ ├── docs/ # Frontend documentation
+│ └── README.md # Frontend documentation
+├── auction_system.sql # Database schema
+└── README.md # Main project documentation
+```
 ## 🚀 Quick Start
-
 ### Prerequisites
-- Flutter SDK (≥ 3.24)
-- Android Studio / Xcode
-- Firebase Project (for backend)
-- Google Maps API Key
-- PayHere / Stripe Sandbox Account
-
+- **.NET 8.0 SDK** for backend development
+- **Node.js 18+** for frontend development
+- **MySQL Server** for database
+- **Git** for version control
 ### Installation & Setup
-
-```bash
-# 1. Clone the repository
-git clone https://github.com/yourusername/FixOnGo.git
-cd FixOnGo
-
-# 2. Install dependencies
-flutter pub get
-
-# 3. Setup Firebase
-#    - Download google-services.json (Android) & GoogleService-Info.plist (iOS)
-#    - Place them in android/app/ and ios/Runner/ respectively
-
-# 4. Add Google Maps API key in AndroidManifest & Info.plist
-
-# 5. Run the app
-flutter run
-```
-
-**Access Points**  
-- Android Emulator / iOS Simulator  
-- Physical Device (USB debugging enabled)
-
----
-
-## 🗄️ Database Schema (Firebase Firestore)
-
-**Collections**:
-- `users` – Driver profiles & vehicle details
-- `service_providers` – Verified mechanics, garages, towing services
-- `breakdown_requests` – Active & past requests
-- `chats` – In-app conversations
-- `payments` – Transaction records
-- `notifications` – User notifications
-
----
-
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/dulanthabrew/WEB-PROJECT-VortexBid.git
+   cd Vortex-Bid-New
+   ```
+2. **Backend Setup**
+   ```bash
+   cd Backend/api
+   dotnet restore
+   dotnet ef database update
+   dotnet watch run
+   ```
+3. **Frontend Setup**
+   ```bash
+   cd Frontend
+   npm install
+   npm run dev
+   ```
+4. **Database Setup**
+   - Import `auction_system.sql` into your MySQL database
+   - Update connection strings in `Backend/api/appsettings.json`
+### Access Points
+- **Frontend**: http://localhost:5173
+- **Backend API**: https://localhost:5000
+- **API Documentation**: https://localhost:5000/swagger
+## 🗄️ Database Schema
+### Core Entities
+#### Users
+- User authentication and profile management
+- Personal information and contact details
+- Authentication tokens and security
+#### Auctions
+- Auction details and metadata
+- Start/end times and bidding rules
+- Status tracking and winner management
+#### Bids
+- Bid tracking and validation
+- Bidder information and amounts
+- Status and timestamp management
+#### Payments
+- Payment processing and tracking
+- Stripe integration and verification
+- Transaction history and receipts
+#### Notifications
+- Real-time notification system
+- User-specific notifications
+- Read/unread status tracking
+#### AuctionItems
+- Multiple items per auction
+- Item details and images
+- Category and description management
 ## 🔧 Configuration
-
-**Firebase** – `firebase_options.dart` (auto-generated)  
-**Google Maps** – Add API key in `AndroidManifest.xml` & `Info.plist`  
-**Payment Gateways** – Keys stored in Firebase Remote Config (production) or `.env` (development)
-
----
-
-## 📡 Backend Services (Firebase / REST)
-
-- User Authentication
-- Real-time Location Updates
-- Mechanic Matching (geohash based)
-- Push Notifications
-- Payment Webhooks
-- Chat (Firestore real-time listeners)
-
----
-
+### Backend Configuration
+```json
+{
+  "ConnectionStrings": {
+    "DefaultConnection": "Server=localhost;Port=3306;Database=auction_system;User=root;Password=your_password;"
+  },
+  "Stripe": {
+    "SecretKey": "sk_test_...",
+    "PublishableKey": "pk_test_..."
+  }
+}
+```
+### Frontend Configuration
+```javascript
+// API Base URL
+const API_BASE_URL = "https://localhost:5000/api";
+// Stripe Configuration
+const stripePromise = loadStripe("pk_test_...");
+```
+## 📡 API Endpoints
+### Authentication
+- `POST /api/users/signup` - User registration
+- `POST /api/users/login` - User authentication
+- `PUT /api/users/edit` - Profile updates
+### Auctions
+- `GET /api/auctions` - List all auctions
+- `POST /api/auctions/create` - Create new auction
+- `GET /api/auctions/{id}` - Get auction details
+- `POST /api/auctions/my` - Get user's auctions
+- `PUT /api/auctions/edit` - Update auction details
+- `DELETE /api/auctions/delete` - Delete auction
+### Bidding
+- `POST /api/bids/create` - Place a bid
+- `GET /api/bids/{id}` - Get bid details
+- `POST /api/auctions/mybids` - Get user's bids
+### Payments
+- `POST /api/payments/create` - Process payment
+- `POST /api/payments/my` - Get payment history
+- `POST /api/payments/check` - Verify payment status
+### Notifications
+- `GET /api/notifications/{id}` - Get user notifications
+- `POST /api/notifications/read` - Mark as read
 ## 🎨 User Interface
-
-Fully responsive dual-theme design (Dark & Light) with professional wireframes included in the proposal.
-
-**Key Screens**:
-- Splash & Onboarding
-- Login / Registration (Mobile OTP + Google/Apple)
-- Home Dashboard – “GET HELP NOW”
-- AI Assistant Chat
-- Live Map with Nearby Mechanics
-- Mechanic/Tool Request Flow
-- Real-time Tracking
-- In-App Chat
-- Payment Summary & Receipt
-- Service Rating
-- Profile & Vehicle Management
-
-*(All wireframes available in `docs/wireframes/` – Dark & Light variants shown in proposal pages 7–15)*
-
----
-
+### Public Pages
+- **Landing Page**: Compelling homepage with featured auctions
+- **Authentication**: Login and registration forms
+- **How It Works**: Process explanation and user guide
+### Dashboard Pages
+- **Main Dashboard**: Analytics and overview
+- **Auctions Management**: Create and manage auctions
+- **Bidding Interface**: Real-time bidding experience
+- **Profile Management**: User profile and settings
+- **Payment History**: Transaction tracking
+- **Notifications**: Real-time notification center
+### Design Features
+- **Responsive Design**: Mobile-first approach
+- **Modern UI**: Clean, intuitive interface
+- **Animations**: Smooth transitions and micro-interactions
+- **Accessibility**: WCAG compliant design
+- **Performance**: Optimized for speed and efficiency
 ## 💳 Payment System
-
-- **Gateways**: PayHere (Sri Lanka) / Stripe (International)
-- **Flow**: Upfront cost preview → Secure checkout → Digital receipt
-- **Refund Policy**: Automatic refund for cancelled requests
-- **History**: Full transaction log in user profile
-
----
-
+### Stripe Integration
+- **Secure Processing**: PCI-compliant payment handling
+- **Multiple Payment Methods**: Credit card support
+- **Real-time Validation**: Instant payment verification
+- **Receipt Generation**: Automatic receipt creation
+### Payment Flow
+1. **Bid Placement**: 10% upfront payment required
+2. **Payment Processing**: Secure Stripe processing
+3. **Verification**: Real-time payment verification
+4. **Confirmation**: Payment confirmation and receipt
+5. **Refund Process**: Automatic refund for non-winning bids
 ## 🔐 Security Features
-
-- Firebase Authentication (Email + OTP + Social)
-- Secure token-based sessions
-- Encrypted chat & payment data
-- Verified service provider onboarding
-- Privacy controls & data consent
-- Input validation & rate limiting
-
----
-
-## 📊 Benefits of the Proposed System
-
-- Faster response time during breakdowns
-- Reduced stress & improved safety
-- Access to verified & rated service providers
-- Transparent pricing & secure payments
-- 24/7 AI + human support hybrid model
-- Real-time tracking & communication
-
----
-
+### Authentication & Authorization
+- **JWT Tokens**: Secure token-based authentication
+- **Password Security**: Encrypted password storage
+- **Session Management**: Secure session handling
+- **Route Protection**: Protected dashboard routes
+### Data Security
+- **Input Validation**: Comprehensive input validation
+- **SQL Injection Prevention**: Parameterized queries
+- **XSS Protection**: Cross-site scripting prevention
+- **CSRF Protection**: Cross-site request forgery prevention
+### Payment Security
+- **PCI Compliance**: Stripe's PCI-compliant infrastructure
+- **Encrypted Transmission**: HTTPS for all communications
+- **Secure Storage**: Encrypted sensitive data storage
+- **Audit Trail**: Complete transaction logging
+## 📊 Analytics & Reporting
+### Dashboard Metrics
+- **Total Auctions**: Count of all auctions
+- **Active Bids**: Current active bids
+- **Auction Income**: Total revenue generated
+- **Completed Auctions**: Successfully completed auctions
+### Visual Analytics
+- **Category Distribution**: Pie charts showing auction categories
+- **Trend Analysis**: Bar charts showing auction trends
+- **Activity Feed**: Real-time activity updates
+- **Performance Metrics**: User and system performance data
 ## 🚀 Deployment
-
-### Android
+### Production Requirements
+- **Web Server**: IIS or Linux server
+- **Database**: MySQL production server
+- **SSL Certificate**: HTTPS configuration
+- **Domain**: Production domain setup
+### Environment Configuration
 ```bash
-flutter build apk --release
-# or
-flutter build appbundle --release
+# Production Environment Variables
+ASPNETCORE_ENVIRONMENT=Production
+ConnectionStrings__DefaultConnection="Server=prod-server;Database=auction_system;User=prod_user;Password=secure_password;"
+Stripe__SecretKey="sk_live_..."
+Stripe__PublishableKey="pk_live_..."
 ```
-
-### iOS
-```bash
-flutter build ios --release
-# Upload via Xcode / Transporter
-```
-
-**Stores**:
-- Google Play Store
-- Apple App Store
-
----
-
+### Deployment Steps
+1. **Database Setup**: Configure production MySQL
+2. **Backend Deployment**: Deploy ASP.NET Core application
+3. **Frontend Build**: Build and deploy React application
+4. **SSL Configuration**: Set up HTTPS certificates
+5. **Domain Configuration**: Configure production domain
+6. **Monitoring**: Set up application monitoring
 ## 🧪 Testing
-
-- Unit & Widget tests (Flutter test)
-- Integration tests (real Firebase)
-- Manual testing on multiple devices
-- UI/UX testing with real scenarios
-
----
-
+### Backend Testing
+- **API Testing**: Swagger UI for endpoint testing
+- **Database Testing**: Entity Framework migrations
+- **Integration Testing**: End-to-end API testing
+- **Performance Testing**: Load and stress testing
+### Frontend Testing
+- **Component Testing**: Individual component testing
+- **Integration Testing**: Page-level testing
+- **User Experience Testing**: Usability testing
+- **Cross-browser Testing**: Browser compatibility testing
+## 📈 Performance Optimization
+### Backend Optimization
+- **Database Indexing**: Optimized database queries
+- **Caching**: Response caching for frequently accessed data
+- **Connection Pooling**: Efficient database connections
+- **Async Operations**: Asynchronous processing
+### Frontend Optimization
+- **Code Splitting**: Route-based code splitting
+- **Lazy Loading**: Component lazy loading
+- **Bundle Optimization**: Minimized bundle size
+- **Asset Optimization**: Optimized images and assets
 ## 🔄 Development Workflow
-
-- Git Flow (feature branches)
-- Code reviews via Pull Requests
-- Conventional Commits
-- Flutter Analyze & Test in CI
-
+### Version Control
+- **Git**: Distributed version control
+- **Branching Strategy**: Feature branch workflow
+- **Code Review**: Pull request reviews
+- **Continuous Integration**: Automated testing and deployment
+### Development Tools
+- **IDE**: Visual Studio 2022 or VS Code
+- **Package Managers**: NuGet (backend), npm (frontend)
+- **Build Tools**: .NET CLI, Vite
+- **Linting**: ESLint for code quality
+## 📞 Support & Documentation
+### Documentation
+- **Backend Documentation**: `/Backend/README.md`
+- **Frontend Documentation**: `/Frontend/README.md`
+- **API Documentation**: Swagger UI at `/swagger`
+- **Database Schema**: `auction_system.sql`
+### Getting Help
+- **Code Comments**: Comprehensive inline documentation
+- **API Examples**: Swagger documentation with examples
+- **Component Documentation**: React component documentation
+- **Troubleshooting**: Common issues and solutions
+## 🔄 Version History
+### v1.0.0 - Initial Release
+- Basic auction functionality
+- User authentication
+- Simple bidding system
+- Basic payment integration
+### v1.1.0 - Payment Integration
+- Stripe payment processing
+- Secure payment handling
+- Payment history tracking
+- Receipt generation
+### v1.2.0 - Enhanced Features
+- Real-time notifications
+- Dashboard analytics
+- Chart visualizations
+- Performance improvements
+### v1.3.0 - Advanced Analytics
+- Comprehensive reporting
+- Advanced dashboard metrics
+- User performance tracking
+- System optimization
+## 📄 License
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 ---
-
-## 👥 Group Members (Group 01)
-
-| Name                  | Student ID |
-|-----------------------|------------|
-| KDH Thabrew           | 32348      |
-| DMCDB Dissanayaka     | 32820      |
-| DMCD Senarathna       | 32751      |
-| PWTA Thilakarathna    | 32223      |
-| EMIM Ekanayake        | 32735      |
-| WPGAL Galappaththi    | 32649      |
-| GGAKG Gurulumulla     | 32243      |
-| AMVLB Athauda         | 33076      |
-
----
-
-**FixOnGo** – *Help when you need it most.*
-
-**NSBM Green University Town**  
-**Mobile Application Development Project**  
-**Academic Year 2025/2026**
-```
-
-Copy the entire content above into a new `README.md` file in your project root. It perfectly mirrors the professional structure and style of your VortexBid README while using every relevant detail from the official Group 01 project proposal. Let me know if you want a GitHub repo template or any section expanded!
+**VortexBid** - Your comprehensive solution for online auction management.
